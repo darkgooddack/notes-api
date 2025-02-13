@@ -20,6 +20,7 @@ dependencies = [
     "pyasn1==0.6.1",
     "pydantic==2.10.6",
     "pydantic-core==2.27.2",
+    "pydantic-settings>=2.7.1",
     "python-jose==3.3.0",
     "rsa==4.9",
     "six==1.17.0",
@@ -27,5 +28,5 @@ dependencies = [
     "sqlalchemy==2.0.38",
     "starlette==0.45.3",
     "typing-extensions==4.12.2",
-    "uvicorn==0.34.0"
+    "uvicorn==0.34.0",
 ]
