@@ -2,13 +2,20 @@ from sqlalchemy.orm import Session
 from app.models.note import Note
 from app.schemas.note import NoteCreate, NoteUpdate
 
+# id = Column(Integer, primary_key=True, index=True)
+#     title = Column(String, nullable=False)
+#     description = Column(String, nullable=True)
+#     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+#     created_date = Column(DateTime, server_default=func.now())
+#     deadline = Column(DateTime)
+
 # Создание заметки
 def create_note(db: Session, note: NoteCreate):
     db_note = Note(
         title=note.title,
         content=note.content,
-        start_date=note.start_date,
-        end_date=note.end_date,
+        created_date=note.created_date,
+        deadline=note.deadline,
     )
     db.add(db_note)
     db.commit()
@@ -29,8 +36,8 @@ def update_note(db: Session, note_id: int, note_update: NoteUpdate):
     if db_note:
         db_note.title = note_update.title
         db_note.content = note_update.content
-        db_note.start_date = note_update.start_date
-        db_note.end_date = note_update.end_date
+        db_note.created_date = note_update.created_date
+        db_note.deadline = note_update.deadline
         db.commit()
         db.refresh(db_note)
         return db_note
