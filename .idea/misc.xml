@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="uv (notes-api)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="uv (notes-api)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (notes-api)" project-jdk-type="Python SDK" />
 </project>

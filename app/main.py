@@ -5,7 +5,7 @@ from starlette.responses import RedirectResponse
 
 app = FastAPI()
 
-app.include_router(api_router, tags=["v1"])
+app.include_router(api_router)
 
 @app.get("/")
 def read_root():
