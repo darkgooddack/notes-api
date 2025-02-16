@@ -49,7 +49,7 @@ async def update_note(db: AsyncSession, note_id: int, note_update: NoteUpdate):
     db_note = result.scalars().first()
     if db_note:
         db_note.title = note_update.title
-        db_note.content = note_update.content
+        db_note.description = note_update.description
         db_note.created_date = note_update.created_date
         db_note.deadline = note_update.deadline
         await db.commit()  # Асинхронная коммитация

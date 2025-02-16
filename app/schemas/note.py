@@ -12,10 +12,10 @@ class NoteCreate(BaseModel):
 
 # Схема для обновления заметки
 class NoteUpdate(BaseModel):
-    title: str
-    description: Optional[str] = None  # Исправляем content на description
-    created_date: date
-    deadline: date
+    title: Optional[str] = None
+    description: Optional[str] = None
+    created_date: Optional[date] = None
+    deadline: Optional[date] = None
 
 # Схема для ответа
 class NoteResponse(BaseModel):
